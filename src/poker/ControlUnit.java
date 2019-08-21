@@ -76,7 +76,7 @@ public class ControlUnit {
         GUIPrincipal.getJugador();
 		Jugador.setApuestaActual(0);
 		Jugador.setApuesta(0);
-		Jugador.setApuestaPC(0);
+		Pc.setApuestaPC(0);
     	GUIPrincipal.getJugador().turnCards("player");
     	JOptionPane.showMessageDialog(null, "Nueva Ronda");
     	
@@ -663,8 +663,8 @@ public int ranking(ArrayList<Carta> mano) {
     	}
     	else {
     		GUIPrincipal.getPc();
-    		Jugador.setDineroPC
-    		(Jugador.getDineroPC() + Jugador.getApuestaActual());
+    		Pc.setDineroPC
+    		(Pc.getDineroPC() + Jugador.getApuestaActual());
     		GUIPrincipal.getPanelLateral().updateUI();
     		ControlUnit.newRound();
     		

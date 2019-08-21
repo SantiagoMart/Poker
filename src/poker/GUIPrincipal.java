@@ -26,7 +26,9 @@ public class GUIPrincipal extends JFrame {
     private static ArrayList<Carta> barajaJugador;
     
     /** The pc. */
-    private static Jugador jugador,pc;
+    private static Jugador jugador;
+    
+    private static Pc pc;
     
     /** The size game. */
     public static Dimension sizeGame;
@@ -67,7 +69,7 @@ public class GUIPrincipal extends JFrame {
         barajaPc = controlUnit.getBarajaPc();
         barajaJugador = controlUnit.getBarajaJugador();
         jugador = new Jugador();
-        pc = new Jugador();
+        pc = new Pc();
         
         initGUI();
 
@@ -91,16 +93,16 @@ public class GUIPrincipal extends JFrame {
 		/////////////////////////////////////////
 		//ADD PANELES
 		add(getPanelCentral(),BorderLayout.CENTER);
-		add(getPanelLateral(),BorderLayout.WEST);
+//		add(getPanelLateral(),BorderLayout.WEST);
 
 		////////////////////////////////////////
 		//ADD GRAFICAL INTERFASE
 		getPanelCentral().addFichas();
 		getPanelCentral().addButtons();
-		panelLateral.addButtons();
+//		panelLateral.addButtons();
 
 		getPanelCentral().updateUI();
-		panelLateral.updateUI();
+//		panelLateral.updateUI();
 		vprincipal.setVisible(true);
 
     }
@@ -234,7 +236,7 @@ public class GUIPrincipal extends JFrame {
 	 *
 	 * @return the pc
 	 */
-	public static Jugador getPc() {
+	public static Pc getPc() {
 		return pc;
 	}
 	
